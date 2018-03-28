@@ -45,7 +45,7 @@ public class WhiteStatic : MonoBehaviour {
     {
         System.Random rnd = new System.Random();
 
-        int numRands = 800;
+        int numRands = 1500;
         int[] rands = new int[numRands]; 
         for (int i = 0; i < numRands; i++)
         {
@@ -58,16 +58,19 @@ public class WhiteStatic : MonoBehaviour {
             int r = rnd.Next(1, 9);
             if (r == 1)
             {
-                pixCol[rands[i]] = Color.black; 
+                pixCol[rands[i]] = Color.black;
             } else if (r == 2)
-            { 
+            {
                 pixCol[rands[i]] = Color.cyan;
             } else if (r == 3)
             {
                 pixCol[rands[i]] = Color.magenta;
-            } else
+            } else if (r == 4)
             {
                 pixCol[rands[i]] = Color.white;
+            } else
+            {
+                pixCol[rands[i]] = Color.gray;
             }
         }
 
